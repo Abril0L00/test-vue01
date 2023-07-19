@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.index');
-});
+    return redirect()->route('admin.main');
+})->name('admin');
+
+/*Route::get('/{any}', function (){
+    return view('admin.auth.main');
+})->where('any','.*');*/
+
